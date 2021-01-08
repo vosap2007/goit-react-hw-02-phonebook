@@ -1,9 +1,9 @@
 import React from "react";
-//import styles from '../css/Statistics.module.css';
+import styles from '../css/PhoneBook.module.css';
 
 const Button = () => (
     <div>
-    <button type="button">Add contact</button>
+    <button className={styles.button} type="button">Add contact</button>
     </div>
 );
 

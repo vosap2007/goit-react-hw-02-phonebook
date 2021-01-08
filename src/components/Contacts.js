@@ -1,9 +1,9 @@
 import React from "react";
-//import styles from '../css/Statistics.module.css';
+import styles from '../css/PhoneBook.module.css';
 
 const Contacts = () => (
 
-    <ul>
+    <ul className={styles.text}>
         <li></li>
         <li></li>
         <li></li>

@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 //import PositiveFeedbackPercentage from "./Positive";
 //import NotificationMessage from './NotificationMessage';
-//import styles from '../css/Statistics.module.css';
+import styles from '../css/PhoneBook.module.css';
 
 export default class Input extends Component {
    render() { 
      return (
       <div>
-        <p>Name</p>
+        <p className={styles.text}>Name</p>
         <input></input>
       </div>
     ); 
@@ -36,7 +36,7 @@ export default class Input extends Component {
 
   render() { 
     return (
-      <div className={styles.statistics}>
+      <div className={}>
 
         <span className={styles.title}>Please leave feedback</span>
 

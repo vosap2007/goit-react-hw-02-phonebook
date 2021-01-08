@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Button from './Button';
 import Input from './Input';
 import Contacts from "./Contacts";
+import styles from '../css/PhoneBook.module.css';
 
 export default class App extends Component {
 
@@ -13,12 +14,16 @@ export default class App extends Component {
   render() {
   return (
     <>
-      <p>Phonebook</p>
+      <div className={styles.box}>
+        <p className={styles.title}>Phonebook</p>
+        <div className={styles.border}>
       <Input />
-      <Button />
+          <Button />
+        </div>
       
-      <p>Contacts</p>
-      <Contacts/>
+      <p className={styles.title}>Contacts</p>
+        <Contacts />
+      </div>
     </>
     );
   }
