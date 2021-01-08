@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import FeedbackOptions from './Button';
-import Statistics from './Input';
-import Contacts from "./Total";
+import Button from './Button';
+import Input from './Input';
+import Contacts from "./Contacts";
 
 export default class App extends Component {
 
