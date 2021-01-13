@@ -17,7 +17,10 @@ export default class Input extends Component {
   handleSubmit = e => {
     e.preventDefault();
 
-    this.props.onAddContact(this.state)
+    this.props.onAddContact(this.state);
+
+    this.setState({name: '',
+    number: ''});
    };
 
    render() { 
