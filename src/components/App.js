@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 //import Button from './Button';
 import Input from './Input';
 import Contacts from "./Contacts";
-import { uuid } from 'uuidv4';
+import { v4 as uuidv4 } from 'uuid';
 import styles from '../css/PhoneBook.module.css';
 
 export default class App extends Component {
@@ -15,7 +15,7 @@ export default class App extends Component {
 
   addContacts = name => {
     const contact = {
-      id: uuid(),
+      id: uuidv4(),
       name,
       completed: false
     };

@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-//import PositiveFeedbackPercentage from "./Positive";
-//import NotificationMessage from './NotificationMessage';
 import styles from '../css/PhoneBook.module.css';
 
 export default class Input extends Component {
@@ -12,7 +10,8 @@ export default class Input extends Component {
   handleInputChange = e => {
     const { name, value } = e.target;
 
-    this.setState({ [name]: value });
+    this.setState({ [name]: value,
+     });
   };
 
   handleSubmit = e => {
