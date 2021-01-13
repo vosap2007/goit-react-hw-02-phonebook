@@ -4,66 +4,47 @@ import React, { Component } from 'react';
 import styles from '../css/PhoneBook.module.css';
 
 export default class Input extends Component {
+  state = {
+    name: '',
+    number: ''
+  };
+
+  handleInputChange = e => {
+    const { name, value } = e.target;
+
+    this.setState({ [name]: value });
+  };
+
+  handleSubmit = e => {
+    e.preventDefault();
+
+    this.props.onAddContact(this.state.name)
+   };
+
    render() { 
      return (
       <div>
-        <p className={styles.text}>Name</p>
-        <input></input>
+         <form onSubmit={this.handleSubmit}>
+           <label className={styles.text}>Name
+         <input
+           tape="text"
+           value={this.state.name}
+           onChange={this.handleInputChange}
+               name="name" />
+           </label>
+         </form>
+         
+         <form onSubmit={this.handleSubmit}>
+           <label className={styles.text}>Number
+         <input
+           tape="number"
+           value={this.state.number}
+           onChange={this.handleInputChange}
+               name="number" />
+           </label>
+           <button className={styles.button} type="submit">Add contact</button>
+         </form>
       </div>
     ); 
   }
 }
-
-/*export default class Statistics extends Component {
-
-  static defaultProps = {
-    good: 0,
-    neutral: 0,
-    bad: 0
-  };
-
-  state = {
-    good: 0,
-    neutral: 0,
-    bad: 0
-  };
-
-  handleIncrement = e =>
-    this.setState(state => ({
-      [e.target.id]:
-        Number(state[e.target.id]) + 1,
-    }));
-
-  render() { 
-    return (
-      <div className={}>
-
-        <span className={styles.title}>Please leave feedback</span>
-
-        <FeedbackOptions onIncrement={this.handleIncrement} />
-        
-        <div>
-          <span className={styles.title}>Statistics</span>
-        </div>
-        
-
-        
-        {(this.state.good || this.state.neutral || this.state.bad) > 0 &&
-          <div>
-          <p className={styles.state} >Good: {this.state.good}</p>
-          <p className={styles.state}>Neutral: {this.state.neutral}</p>
-          <p className={styles.state}>Bad: {this.state.bad}</p>
-         </div>}
-
-        {(this.state.good || this.state.neutral || this.state.bad) > 0 && <TotalFeedback onTotal={this.state} /> }
-
-        {(this.state.good || this.state.neutral || this.state.bad) > 0 && <PositiveFeedbackPercentage onTotal={this.state} /> }
-        
-        {(this.state.good || this.state.neutral || this.state.bad) === 0 && <NotificationMessage /> }
-
-        
-      </div>); 
-    
-  }
-}
-*/
