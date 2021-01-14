@@ -5,12 +5,12 @@ const Contacts = ({contacts, onRemoveContacts}) => (
 
     <ul>
         {contacts.map(contact =>
-            <li key={contact.id}>
+            <li className={styles.contact} key={contact.id}>
             <p className={styles.text}>{contact.name}: {contact.number}</p>
-            <section>
-                    <button type="button"
+            <section className={styles.gid}>
+                    <button type="button" className={styles.button}
                         onClick={() => onRemoveContacts(contact.id)}>
-                        Delet</button>
+                        Delete</button>
             </section>
         </li>)}
     </ul>

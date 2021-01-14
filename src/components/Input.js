@@ -25,9 +25,9 @@ export default class Input extends Component {
 
    render() { 
      return (
-      <div>
+      <div className={styles.border}>
          <form onSubmit={this.handleSubmit}>
-           <label className={styles.text}>Name
+           <label className={styles.text}>Name<br/>
          <input
            tape="text"
            value={this.state.name}
@@ -37,13 +37,13 @@ export default class Input extends Component {
          </form>
          
          <form onSubmit={this.handleSubmit}>
-           <label className={styles.text}>Number
+           <label className={styles.text}>Number<br/>
          <input
            tape="number"
            value={this.state.number}
            onChange={this.handleInputChange}
                name="number" />
-           </label>
+           </label><br/>
            <button className={styles.button} type="submit">Add contact</button>
          </form>
       </div>

@@ -54,13 +54,9 @@ export default class App extends Component {
   return (
     <>
       <div className={styles.box}>
-        <p className={styles.title}>Phonebook</p>
-        <div className={styles.border}>
+        <h1 className={styles.title}>Phonebook</h1>
           <Input onAddContact={this.addContacts} />
-        </div>
-      
-        <p className={styles.title}>Contacts</p>
-        <p>Find contacts by name</p>
+        <h2 className={styles.title}>Contacts</h2>
         {visibleContacts.length > 1 && (
         <Filter value={this.state.filter} onChange={this.changeFilter }/>)}
         {visibleContacts.length > 0 && (<Contacts
