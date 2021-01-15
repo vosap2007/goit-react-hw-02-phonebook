@@ -24,7 +24,7 @@ export default class App extends Component {
       number,
     };
 
-    if ('Значение Инпута state.name' == this.state.contacts)
+    if (this.state.contacts.some((e) => e.name === name))
        { alert('This contact already exists!'); }
     else {
       this.setState(prevState => {
