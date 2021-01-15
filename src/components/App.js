@@ -24,11 +24,15 @@ export default class App extends Component {
       number,
     };
 
-    this.setState(prevState => {
+    if ('Значение Инпута state.name' == this.state.contacts)
+       { alert('This contact already exists!'); }
+    else {
+      this.setState(prevState => {
       return {
         contacts: [...prevState.contacts, contact]
       };
-    });
+      });
+    }
   };
 
   removeContacts = contactsId => {
